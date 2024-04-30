@@ -12,4 +12,15 @@ public class UpdateBalancePayload {
     private LocalDate balanceDate;
 
     private double balanceAmount;
+
+    public String getCardNumber() {
+        return creditCardNumber;
+    }
+    public LocalDate getDate() {
+        return balanceDate;
+    }
+
+    public double getAmount() {
+        return balanceAmount;
+    }
 }
