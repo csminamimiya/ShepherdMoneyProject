@@ -30,8 +30,7 @@ public class CreditCard {
     // TODO: Credit card's owner. For detailed hint, please see User class
     // Some field here <> owner;
 
-    @OneToMany(mappedBy = "creditCard", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @OrderBy("date DESC")
+    @OneToMany(mappedBy = "creditCard", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<BalanceHistory> balanceHistories = new ArrayList<>();
     // TODO: Credit card's balance history. It is a requirement that the dates in the balanceHistory 
     //       list must be in chronological order, with the most recent date appearing first in the list. 
